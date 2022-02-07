@@ -2,6 +2,16 @@
   "name": "@webstudio-team/dev-stack",
   "version": "1.0.0",
   "license": "MIT",
+  "description": "Simple dev-stack with a set of reusable vanilla components. Based on [Gulp](https://gulpjs.com) and [Webpack](https://webpack.js.org).",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webstudio-team/dev-stack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/webstudio-team/dev-stack/issues"
+  },
+  "homepage": "https://github.com/webstudio-team/dev-stack#readme",
   "scripts": {
     "serve": "concurrently --kill-others \"gulp serve\" \"yarn run webpack-cli --mode=development\"",
     "dev": "concurrently --kill-others \"gulp serve\" \"yarn run webpack-cli --mode=development\"",
