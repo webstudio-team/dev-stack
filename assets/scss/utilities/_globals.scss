@@ -1,0 +1,16 @@
+.list {
+  &--no-bullets {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.hr {
+  &--light-gray {
+    border-bottom: 1px solid $colorLightGray;
+  }
+  &--full {
+    max-width: 100%;
+  }
+}

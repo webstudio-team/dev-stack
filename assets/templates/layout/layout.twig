@@ -1,0 +1,12 @@
+{% extends "base.twig" %}
+
+{% block body %}
+
+<nav class="accessibility-navigation" id="accessibility-navigation">
+  <a title="Skip to content" href="#main">Skip to content</a>
+  <a title="Skip to navigation" href="#navigation">Skip to navigation</a>
+</nav>
+{% block content %}{% endblock %}
+{% include "footer.twig" %}
+
+{% endblock %}

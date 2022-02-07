@@ -1,0 +1,11 @@
+.documentation-grid {
+  .grid__col {
+    margin-bottom: 12px;
+    & > div {
+      background: $colorPrimary;
+      color: #fff;
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+}

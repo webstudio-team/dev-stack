@@ -1,0 +1,28 @@
+.grid {
+  @include make-grid-wrapper();
+
+  &--spacing-none {
+    margin-right: 0;
+    margin-left: 0;
+
+    > .grid__col,
+    > [class*="grid__col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  &--spacing-mini {
+    margin-right: 0;
+    margin-left: -1px;
+
+    > .grid__col,
+    > [class*="grid__col-"] {
+      padding-right: 0;
+      padding-left: 1px;
+    }
+  }
+
+  @include make-spacing-widths();
+}
+
+@include make-grid-columns();

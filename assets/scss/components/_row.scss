@@ -1,0 +1,11 @@
+.row {
+  @include make-row();
+  @include make-row-max-widths();
+
+  &--fluid {
+    @include make-row();
+  }
+  &--small {
+    max-width: 800px;
+  }
+}

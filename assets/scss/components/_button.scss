@@ -1,0 +1,300 @@
+.button {
+  font-family: inherit;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  &__text {
+    position: relative;
+    display: block;
+    padding: 17px 40px;
+    font-size: 14px;
+    // letter-spacing: 0.08em;
+    line-height: 16px;
+    border-radius: $borderRadius;
+    background: $colorPrimary;
+    color: $colorWhite;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+  }
+  &:hover,
+  &:focus,
+  &a:hover,
+  &a:focus {
+    .button {
+      &__text {
+        background: $colorPrimaryDarken;
+      }
+    }
+  }
+  &--blank {
+    .button {
+      &__text {
+        background: none;
+        color: $colorBodyText;
+      }
+    }
+    &:hover,
+    &:focus,
+    &a:hover,
+    &a:focus {
+      .button {
+        &__text {
+          background: none;
+          color: $colorPrimaryDarken;
+        }
+      }
+    }
+  }
+
+  &--outline {
+    .button {
+      &__text {
+        background: none;
+        color: $colorPrimary;
+        border: 2px solid $colorPrimary;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+    }
+    &.button {
+      &--sm {
+        .button {
+          &__text {
+            padding-top: 10px;
+            padding-bottom: 10px;
+          }
+        }
+      }
+      &--xs {
+        .button {
+          &__text {
+            padding-top: 8px;
+            padding-bottom: 8px;
+          }
+        }
+      }
+    }
+    &:hover,
+    &:focus,
+    & a:hover,
+    & a:focus {
+      .button {
+        &__text {
+          color: $colorWhite;
+          background: $colorPrimary;
+        }
+      }
+    }
+  }
+
+  &--secondary {
+    .button {
+      &__text {
+        background: $colorSecondary;
+      }
+    }
+    &.button {
+      &--outline {
+        .button {
+          &__text {
+            background: none;
+            color: $colorSecondary;
+            border-color: $colorSecondary;
+          }
+        }
+      }
+    }
+    &:hover,
+    &:focus,
+    &a:hover,
+    &a:focus {
+      .button {
+        &__text {
+          background: $colorSecondaryDarken;
+        }
+      }
+      &.button {
+        &--outline {
+          .button {
+            &__text {
+              background: $colorSecondary;
+              color: $colorWhite;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &--white {
+    .button {
+      &__text {
+        background: $colorWhite;
+        color: $colorPrimary;
+      }
+    }
+    &.button {
+      &--outline {
+        .button__text {
+          background: none;
+          color: $colorWhite;
+          border-color: $colorWhite;
+        }
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &a:hover,
+    &a:focus {
+      .button {
+        &__text {
+          background: $colorLightGray;
+        }
+      }
+      &.button {
+        &--outline {
+          .button {
+            &__text {
+              background: $colorWhite;
+              color: $colorPrimary;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &--icon-l,
+  &--icon-r {
+    .button {
+      &__icon {
+        position: absolute;
+        top: 50%;
+        margin-top: -8px;
+        &.icon {
+          width: 18px;
+          height: 18px;
+          &--logout {
+
+          }
+        }
+      }
+    }
+  }
+  &--icon-l {
+    .button {
+      &__text {
+        padding-left: 50px;
+      }
+      &__icon {
+        left: 25px;
+      }
+    }
+    &.button {
+      &--sm {
+        .button {
+          &__text {
+            padding-left: 50px;
+          }
+        }
+      }
+    }
+  }
+  &--icon-r {
+    .button {
+      &__text {
+        padding-right: 50px;
+      }
+      &__icon {
+        right: 25px;
+      }
+    }
+    &.button {
+      &--sm {
+        .button {
+          &__text {
+            padding-right: 50px;
+          }
+        }
+      }
+    }
+  }
+  &--block {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  &--wide {
+    .button {
+      &__text {
+        padding-left: 60px;
+        padding-right: 60px;
+      }
+    }
+  }
+  &--lg {
+    .button {
+      &__text {
+        padding-top: 24px;
+        padding-bottom: 24px;
+      }
+    }
+    &.button {
+      &--outline {
+        .button {
+          &__text {
+            padding-top: 22px;
+            padding-bottom: 22px;
+          }
+        }
+      }
+    }
+  }
+  &--sm {
+    .button {
+      &__text {
+        padding: 12px 30px;
+      }
+    }
+  }
+  &--xs {
+    .button {
+      &__text {
+        font-size: 12px;
+        padding: 10px 15px;
+      }
+    }
+  }
+  &--icon-only {
+    .button {
+      &__icon {
+        height: 18px;
+      display: block;
+      }
+    }
+    &.button {
+      &--lg {
+        .button {
+          &__text {
+            padding: 23px;
+          }
+        }
+      }
+    }
+  }
+  &.is-disabled,
+  &[disabled] {
+    .button__text {
+      opacity: 0.8;
+      cursor: not-allowed;
+      background: $colorGray;
+    }
+  }
+}

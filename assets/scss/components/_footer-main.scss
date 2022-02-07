@@ -1,0 +1,83 @@
+.footer-main {
+  &__link {
+    display: flex;
+    align-items: center;
+  }
+  &__citation {
+    font-size: 12px;
+    border-top: 1px solid $colorGray;
+    padding: 10px 0;
+  }
+  &__extended {
+    padding: 20px 0;
+    border-top: 1px solid $colorGray;
+    &--gray {
+      background: $colorLightGray;
+    }
+    &--primary {
+      background: $colorPrimary;
+      color: $colorWhite;
+      h1,
+      .h1,
+      h2,
+      .h2,
+      h3,
+      .h3,
+      h4,
+      .h4,
+      h5,
+      .h5,
+      h6,
+      .h6 {
+        color: $colorWhite;
+      }
+      a {
+        color: $colorWhite;
+        &:hover,
+        &:focus {
+          color: $colorWhite;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__identity {
+    border-top: 1px solid $colorGray;
+    padding: 20px 0;
+    &-link {
+      display: flex;
+      align-items: center;
+    }
+    &-logo {
+      float: left;
+      max-width: 100%;
+      &-text {
+        display: flex;
+        height: 100%;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 0.75rem;
+        line-height: 1.25em;
+        margin-left: 10px;
+      }
+      &--opz {
+        width: 213px;
+      }
+      &--uzis {
+        width: 68px;
+        height: 47px;
+      }
+      &--iba {
+        width: 142px;
+        height: 47px;
+      }
+    }
+    &-column {
+      display: flex;
+      align-items: center;
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        display: block;
+      }
+    }
+  }
+}

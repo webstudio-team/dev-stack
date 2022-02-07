@@ -1,0 +1,147 @@
+.header-main {
+  &__identity {
+    border-bottom: 1px solid $colorGray;
+    padding: 15px 0;
+    &-logo {
+      &-link {
+        margin-left: 15px;
+        text-decoration: none;
+      }
+      &--opz {
+        width: 213px;
+      }
+      &--uzis {
+        width: 60px;
+      }
+      &--iba {
+        width: 120px;
+      }
+    }
+    &-column {
+      display: flex;
+      align-items: center;
+      &--r {
+        justify-content: flex-end;
+        @include media-breakpoint-down(sm) {
+          justify-content: flex-end;
+          flex-direction: row-reverse;
+        }
+        
+      }
+    }
+    &-text {
+      color: $colorBodyText;
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 1.2;
+      text-align: right;
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    @include media-breakpoint-down(md) {
+      flex-wrap: wrap;
+    }
+  }
+  &__main {
+    padding: 20px 0;
+  }
+  &__language {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+  }
+  &__logo {
+    max-width: 90px;
+  }
+
+  &__title {
+    color: $colorPrimary;
+    margin: 0;
+    font-size: 26px;
+    width: 100%;
+    margin-bottom: 1px;
+    font-weight: 700;
+    line-height: 1.2;
+    @include media-breakpoint-down(md) {
+      margin-top: 15px;
+      font-size: 24px;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 20px;
+    }
+  }
+  &__subtitle {
+    color: rgba($colorBodyText, 0.8);
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+    margin-top: 1px;
+    font-style: italic;
+    line-height: 1.2;
+    @include media-breakpoint-down(md) {
+      font-size: 13px;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 12px;
+    }
+  }
+  &__text {
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+  &--tiny {
+    .header-main {
+      @include media-breakpoint-down(md) {    
+        &__wrapper {
+          flex-wrap: nowrap;
+        }
+        &__text {
+          padding-left: 15px;
+        }
+        &__title {
+          margin-top: 0;
+        }
+        &__language {
+          width: 100%;
+          text-align: right;
+        }
+      }
+      &__logo {
+        max-width: 75px;
+      }
+      &__title {
+        font-size: 20px;
+      }
+      &__subtitle {
+        font-size: 12px;
+      }
+      &__identity {
+        &-text {
+          display: none;
+        }
+        &-column {
+          &--r {
+            @include media-breakpoint-down(md) {
+              justify-content: flex-end;
+              flex-direction: row-reverse;
+            }
+          }
+        }
+      }
+    }
+  }
+}

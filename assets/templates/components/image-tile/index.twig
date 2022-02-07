@@ -1,0 +1,206 @@
+<div class="row documentation-section">
+  <h2 class="documentation-section__title">Image-tile</h2>
+
+  <div class="documentation-section-modifiers__wrapper">
+    <ul class="documentation-section-modifiers__list">
+      <li class="documentation-section-modifiers__item">
+        <p>
+          <span class="documentation-section-modifiers__modifier">
+            .image-tile--primary
+          </span>
+          Primární pozadí
+        </p>
+      </li>
+      <li class="documentation-section-modifiers__item">
+        <p>
+          <span class="documentation-section-modifiers__modifier">
+            .image-tile--secondary
+          </span>
+          Sekundární pozadí
+        </p>
+      </li>
+      <li class="documentation-section-modifiers__item">
+        <p>
+          <span class="documentation-section-modifiers__modifier">
+            .image-tile--side-image
+          </span>
+          Nastaví obrázek na stranu
+        </p>
+      </li>
+      <li class="documentation-section-modifiers__item">
+        <p>
+          <span class="documentation-section-modifiers__modifier">
+            .image-tile--background-image
+          </span>
+          Nastaví obrázek na pozadí
+        </p>
+      </li>
+      <li class="documentation-section-modifiers__item">
+        <p>
+          <span class="documentation-section-modifiers__modifier">
+            .image-tile--border-radius
+          </span>
+          Nastaví komponentě border radius
+        </p>
+      </li>
+      <li class="documentation-section-modifiers__item">
+        <p>
+          <span class="documentation-section-modifiers__modifier">
+            .image-tile__image-holder--small
+          </span>
+          Nastaví obrázku malou výšku (fixní)
+        </p>
+      </li>
+      <li class="documentation-section-modifiers__item">
+        <p>
+          <span class="documentation-section-modifiers__modifier">
+            .image-tile__image-holder--aspect-ratio-16x9
+          </span>
+          Nastaví obrázku poměr stran 16x9
+        </p>
+      </li>
+      <li class="documentation-section-modifiers__item">
+        <p>
+          <span class="documentation-section-modifiers__modifier">
+            .image-tile__image-holder--aspect-ratio-4x3
+          </span>
+          Nastaví obrázku poměr stran 4x3
+        </p>
+      </li>
+      <li class="documentation-section-modifiers__item">
+        <p>
+          <span class="documentation-section-modifiers__modifier">
+            .image-tile__image-holder--overlay
+          </span>
+          Nastaví obrázku překryv
+        </p>
+      </li>
+    </ul>
+  </div>
+
+  <h3>Image-tile not link</h3>
+  <div class="image-tile">
+    <div class="image-tile__wrapper">
+      <div class="image-tile__image-holder image-tile__image-holder--overlay image-tile__image-holder--primary" style="background-image: url('https://images.unsplash.com/photo-1572988163424-1deefefec9c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');">
+        <!-- <div class="image-tile__image"></div> -->
+      </div>
+      <div class="image-tile__content text--body-text-color">
+        <h3>Nadpis</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque accusamus ipsam facilis, dolore consectetur quos nam minima labore voluptas soluta! Nobis tenetur facilis voluptatibus fugiat sed est recusandae itaque harum?</p>
+      </div>
+    </div>
+  </div>
+
+  <h3>Image-tile top</h3>
+  <div class="image-tile">
+    <a class="image-tile__link" href="#">
+      <div class="image-tile__wrapper">
+        <div class="image-tile__image-holder image-tile__image-holder--overlay image-tile__image-holder--primary" style="background-image: url('https://images.unsplash.com/photo-1572988163424-1deefefec9c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');">
+          <!-- <div class="image-tile__image"></div> -->
+        </div>
+        <div class="image-tile__content text--body-text-color">
+          <h3>Nadpis</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque accusamus ipsam facilis, dolore consectetur quos nam minima labore voluptas soluta! Nobis tenetur facilis voluptatibus fugiat sed est recusandae itaque harum?</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <h3>Image-tile aspect ratio</h3>
+  <div class="image-tile">
+    <a class="image-tile__link" href="#">
+      <div class="image-tile__wrapper">
+        <div class="image-tile__image-holder image-tile__image-holder--aspect-ratio-16x9" style="background-image: url('https://images.unsplash.com/photo-1572988163424-1deefefec9c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');">
+          <!-- <div class="image-tile__image"></div> -->
+        </div>
+        <div class="image-tile__content text--body-text-color">
+          <h3>Nadpis</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque accusamus ipsam facilis, dolore consectetur quos nam minima labore voluptas soluta! Nobis tenetur facilis voluptatibus fugiat sed est recusandae itaque harum?</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <h3>Image-tile radius</h3>
+  <div class="image-tile image-tile--border-radius">
+    <a class="image-tile__link" href="#">
+      <div class="image-tile__wrapper">
+        <div class="image-tile__image-holder image-tile__image-holder--overlay" style="background-image: url('https://images.unsplash.com/photo-1572988163424-1deefefec9c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');">
+          <!-- <div class="image-tile__image"></div> -->
+        </div>
+        <div class="image-tile__content text--body-text-color">
+          <h3>Nadpis</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque accusamus ipsam facilis, dolore consectetur quos nam minima labore voluptas soluta! Nobis tenetur facilis voluptatibus fugiat sed est recusandae itaque harum?</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <h3>Image-tile primary</h3>
+  <div class="image-tile image-tile--border-radius">
+    <a class="image-tile__link" href="#">
+      <div class="image-tile__wrapper">
+        <div class="image-tile__image-holder image-tile__image-holder--overlay image-tile__image-holder--primary" style="background-image: url('https://images.unsplash.com/photo-1572988163424-1deefefec9c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');">
+          <!-- <div class="image-tile__image"></div> -->
+        </div>
+        <div class="image-tile__content text--body-text-color">
+          <h3>Nadpis</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque accusamus ipsam facilis, dolore consectetur quos nam minima labore voluptas soluta! Nobis tenetur facilis voluptatibus fugiat sed est recusandae itaque harum?</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <h3>Image-tile overlay secondary</h3>
+  <div class="image-tile image-tile--border-radius">
+    <a class="image-tile__link" href="#">
+      <div class="image-tile__wrapper">
+        <div class="image-tile__image-holder image-tile__image-holder--overlay image-tile__image-holder--secondary" style="background-image: url('https://images.unsplash.com/photo-1572988163424-1deefefec9c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');">
+          <!-- <div class="image-tile__image"></div> -->
+        </div>
+        <div class="image-tile__content text--body-text-color">
+          <h3>Nadpis</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque accusamus ipsam facilis, dolore consectetur quos nam minima labore voluptas soluta! Nobis tenetur facilis voluptatibus fugiat sed est recusandae itaque harum?</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <h3>Image-tile side</h3>
+  <div class="image-tile image-tile--side-image">
+    <a class="image-tile__link" href="#">
+      <div class="image-tile__wrapper">
+        <div class="image-tile__image-holder image-tile__image-holder--overlay image-tile__image-holder--primary" style="background-image: url('https://images.unsplash.com/photo-1572988163424-1deefefec9c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');">
+          <!-- <div class="image-tile__image"></div> -->
+        </div>
+        <div class="image-tile__content text--body-text-color">
+          <h3>Nadpis</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque accusamus ipsam facilis, dolore consectetur quos nam minima labore voluptas soluta! Nobis tenetur facilis voluptatibus fugiat sed est recusandae itaque harum?</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <h3>Image-tile background</h3>
+  <div class="image-tile image-tile--background-image">
+    <a class="image-tile__link" href="#">
+      <div class="image-tile__wrapper">
+        <div class="image-tile__image-holder image-tile__image-holder--overlay image-tile__image-holder--primary" style="background-image: url('https://images.unsplash.com/photo-1572988163424-1deefefec9c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');">
+          <!-- <div class="image-tile__image"></div> -->
+        </div>
+        <div class="image-tile__content">
+          <h3 class="text--center text--white">Nadpis</h3>
+        </div>
+      </div>
+    </a>
+  </div>
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

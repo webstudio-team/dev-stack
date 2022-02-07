@@ -1,0 +1,52 @@
+{
+  "vendors": {
+    "paths": [
+      "assets/js/polyfills.js"
+    ]
+  },
+  "customScripts": {
+    "paths": [
+      "assets/js/app.js"
+    ]
+  },
+  "html": {
+    "src": "./dist/"
+  },
+
+  "templates": {
+    "src": "assets/templates/",
+    "dist": "dist/"
+  },
+
+  "styles": {
+    "src": "assets/scss/",
+    "dist": "dist/css/"
+  },
+
+  "scripts": {
+    "src": "./assets/js/",
+    "dist": "./dist/js/"
+  },
+  "images": {
+    "src": "assets/images/",
+    "dist": "dist/images/"
+  },
+  "favicon": {
+    "src": "./assets/images/favicon/",
+    "dist": "dist/"
+  },
+  "fonts": {
+    "src": "./assets/fonts/",
+    "dist": "./dist/fonts/"
+  },
+  "svg": {
+    "src": "assets/images/",
+    "dist": "dist/images/"
+  },
+
+  "tasks": {
+    "build": ["styles", "images", "res-img", "fonts", "copy-fa-fonts", "svg", "templates", "extras"],
+    "serve": ["styles", "images", "res-img", "fonts", "copy-fa-fonts", "svg", "templates"],
+    "production": ["styles:min", "fonts", "copy-fa-fonts", "images", "res-img:min","favicon", "svg", "templates", "extras"]
+  }
+}

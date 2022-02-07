@@ -1,0 +1,318 @@
+$escaped-select-color: to-string($colorPrimary);
+
+.input {
+  &__text,
+  &__select {
+    display: block;
+    border: 1px solid $colorGray;
+    padding: 14px 19px 15px;
+    background: #fff;
+    font-size: 14px;
+    line-height: normal;
+    width: 100%;
+    height: 50px;
+    border-radius: $borderRadius;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: border-color 0.3s;
+    &:focus {
+      border-color: $colorPrimary;
+      outline: 0;
+    }
+    &--sm {
+      height: 40px;
+      padding: 10px 15px;
+    }
+
+    &--xs {
+      height: 36px;
+      padding: 7px 15px 8px;
+    }
+
+    &--lg {
+      height: 64px;
+      font-size: 16px;
+      padding: 20px 29px;
+    }
+  }
+  &__text {
+    color: $colorBodyText;
+    font-family: inherit;
+    &[disabled] {
+      cursor: not-allowed;
+      background: $colorGray;
+      opacity: 0.8;
+    }
+    &[placeholder] {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      vertical-align: bottom;
+    }
+    @include placeholder($colorDarkGray, normal);
+    &:focus {
+      @include placeholder(rgba($colorDarkGray, 0.5), normal);
+    }
+    &.has-error {
+      border-color: $colorRed;
+      & ~ .input__icon {
+        color: $colorRed;
+      }
+    }
+
+    &--bold {
+      font-family: inherit;
+      color: $colorBlack;
+      @include placeholder(inherit, normal);
+      &:focus {
+        @include placeholder(rgba($colorBlack, 0.5), normal);
+      }
+    }
+  }
+  &__select {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='28' height='32' viewBox='0 0 28 32' style='fill: #{str-replace($escaped-select-color, '#', '%23')}'><path d='M27.719 10.162l-.444-.444a.75.75 0 0 0-1.063 0L13.999 21.937 1.78 9.718a.75.75 0 0 0-1.063 0l-.444.444a.75.75 0 0 0 0 1.063l13.188 13.194a.75.75 0 0 0 1.063 0l13.188-13.194c.3-.294.3-.769.006-1.063z'></path></svg>");
+    background-size: 15px;
+    background-position: right 20px center;
+    background-repeat: no-repeat;
+  }
+  &__label {
+    display: inline-block;
+    &.is-disabled {
+      opacity: 0.8;
+    }
+  }
+  &__wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+    &--icon-after {
+      .input {
+        &__text {
+          padding-right: 48px;
+        }
+        &__icon {
+          right: 15px;
+        }
+      }
+    }
+    &--icon-before {
+      .input {
+        &__text {
+          padding-left: 48px;
+        }
+        &__icon {
+          left: 15px;
+        }
+      }
+    }
+    &--btn-icon {
+      .input {
+        &__text {
+          padding-right: 64px;
+        }
+      }
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 16px;
+    color: $colorBodyText;
+    z-index: 1;
+    pointer-events: none;
+    &--lighten {
+      opacity: 0.5;
+    }
+    &--link {
+      pointer-events: inherit;
+      cursor: pointer;
+    }
+  }
+  &__btn {
+    display: block;
+    white-space: nowrap;
+  }
+  &__btn-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &__error {
+    line-height: 1.4;
+    color: $colorRed;
+  }
+  &--multiple {
+    margin-bottom: 0;
+    margin: 0 0 -5px 1px;
+    flex-wrap: wrap;
+    .input__wrapper {
+      margin-bottom: 5px;
+      width: auto;
+      margin: 0 0 5px -1px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      & > .input__text {
+        &:focus {
+          position: relative;
+          z-index: 1;
+        }
+      }
+    }
+  }
+  &--multiple-btn {
+    width: auto;
+  }
+  &--group {
+    .input {
+      &__wrapper {
+        // &:not(:first-of-type) {
+        //   & > .input__text {
+        //     border-left: 0;
+        //   }
+        // }
+        // &:not(:last-of-type) {
+        //   & > .input__text {
+        //     border-right: 0;
+        //   }
+        // }
+      }
+    }
+  }
+  &--group,
+  &--multiple {
+    .input {
+      &__wrapper {
+        flex: 0 1 auto;
+      }
+    }
+  }
+}
+
+textarea {
+  &.input {
+    &__text {
+      resize: vertical;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .input {
+    &__text {
+      &--lg {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+    &--group,
+    &--group-spaced {
+      .input {
+        &__btn {
+          margin-top: 10px;
+        }
+      }
+    }
+    &--multiple {
+      .input {
+        &__wrapper {
+          margin-bottom: 5px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .input--group,
+  .input--multiple {
+    display: flex;
+    width: 100%;
+    .input {
+      &__wrapper {
+        flex: 0 1 auto;
+        &:not(:first-of-type) {
+          & ~ .input__btn {
+            background: #000;
+            .button {
+              &__text {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+              }
+            }
+          }
+          & > .input__text {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+        }
+        &:not(:last-of-type) {
+          & > .input__text {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+          & ~ .input__btn {
+            .button {
+              &__text {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .input--group {
+    .input {
+      &__wrapper {
+        &:not(:first-of-type) {
+          & > .input__text {
+            border-left: 0;
+          }
+        }
+        &:not(:last-of-type) {
+          & > .input__text {
+            border-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .input--group-spaced {
+    display: flex;
+    min-width: 100%;
+    margin-left: -10px;
+    & > * {
+      margin-left: 10px;
+    }
+    .input__wrapper {
+      flex: 0 1 auto;
+    }
+  }
+
+  .input--multiple {
+    margin: 0 0 -5px 1px;
+    flex-wrap: wrap;
+    .input {
+      &__wrapper {
+        width: auto;
+        margin: 0 0 5px -1px;
+        &:focus {
+          position: relative;
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  .input--multiple-btn {
+    width: auto;
+  }
+}

@@ -1,0 +1,11 @@
+.documentation-colors {
+  color: #fff;
+  &__col {
+    flex: 1 0 0;
+    padding: 20px;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

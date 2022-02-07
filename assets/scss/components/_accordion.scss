@@ -1,0 +1,191 @@
+$transitionSpeed: 0.25s;
+.accordion {
+  display: inline-block;
+  &__list {
+    width: 100%;
+  }
+  &__item {
+    width: 100%;
+    position: relative;
+    color: $colorBodyText;
+    transition: margin $transitionSpeed ease, box-shadow $transitionSpeed ease;
+    border-top: 1px solid transparent;
+    border-left: 1px solid $colorGray;
+    border-right: 1px solid $colorGray;
+    border-bottom: 1px solid $colorGray;
+    background: rgb(255, 255, 255);
+    box-shadow: none;
+    &.is-opened {
+      margin: 8px 0;
+      box-shadow: rgba(23, 27, 30, 0.1) 0px 4px 12px 0px;
+      border-top: 1px solid $colorGray;
+      .accordion {
+        &__body {
+          height: auto;
+        }
+        &__header {
+          &:after {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+        &__header-icon {
+          transform: scaleY(-1);
+          
+        }
+      }
+      & + .accordion__item {
+        border-top: 1px solid $colorGray;
+      }
+    }
+    &:first-child {
+      border-top: 1px solid $colorGray;
+    }
+    &.is-disabled {
+      pointer-events: none;
+      background: $colorLightGray;
+      .accordion {
+        &__header-title,
+        &__header-icon {
+          opacity: 0.4;
+          user-select: none;
+        }
+      }
+    }
+  }
+  &__header {
+    display: flex;
+    padding: 0 18px 0 18px;
+    min-height: 48px;
+    cursor: pointer;
+    margin: 0;
+    outline: none;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    border-radius: 0;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    &:after {
+      content: "";
+      display: block;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      position: absolute;
+      background: $colorGray;
+      width: calc(100% - 36px);
+      height: 1px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity $transitionSpeed ease, visibility $transitionSpeed ease;
+    }
+  }
+  &__header-title {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  &__header-content {
+    margin: 12px 0;
+    display: flex;
+    flex-grow: 1;
+  }
+  &__header-icon {
+    position: relative;
+    flex: 0 0 auto;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    color: $colorBodyText;
+    transition: transform $transitionSpeed ease;
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      fill: currentColor;
+      pointer-events: none;
+      transform: translateZ(0);
+    }
+  }
+  &__body {
+    height: 0;
+    overflow: hidden;
+    outline: 0;
+    transition: height $transitionSpeed ease;
+  }
+  &__body-content {
+    width: 100%;
+    padding: 18px;
+    box-sizing: border-box;
+    p {
+      margin-bottom: 0;
+    }
+  }
+  &--white {
+    background: $colorWhite;
+  }
+  &--light-gray-borders {
+    .accordion {
+      &__item {
+        border-left: 1px solid $colorLightGray;
+        border-right: 1px solid $colorLightGray;
+        border-bottom: 1px solid $colorLightGray;
+        &.is-opened {
+          border-top: 1px solid $colorLightGray;
+          & + .accordion__item {
+            border-top: 1px solid $colorLightGray;
+          }
+        }
+        &:first-child {
+          border-top: 1px solid $colorLightGray;
+        }
+      }
+      &__header {
+        &:after {
+          background: $colorLightGray;
+        }
+      }
+    }
+  } 
+  &--transparent {
+    .accordion {
+      &__item {
+        background: transparent;
+      }
+    }
+  }
+  &--no-opened-margin {
+    .accordion {
+      &__item {
+        &.is-opened {
+          margin: 0;
+          border-top: 1px solid transparent;
+          box-shadow: inherit;
+          & + .accordion__item {
+            border-top: 1px solid transparent;
+          }
+        }
+        &:first-child {
+          &.is-opened {
+            border-top: 1px solid $colorGray;
+          }            
+        }
+      }
+    }
+  }
+  &--block {
+    width: 100%;
+  }
+  &--no-border-lr {
+    .accordion {
+      &__item {
+        border-left: 0;
+        border-right: 0;
+      }
+    }
+  }
+}

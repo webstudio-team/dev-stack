@@ -1,0 +1,103 @@
+// -----------------------------------------------------------------------------
+// Spacing
+// -----------------------------------------------------------------------------
+
+@mixin generate-spacing-classes() {
+  @each $space in $spacingSizes {
+    .mt-#{$space} {
+      margin-top: #{$space}px !important;
+    }
+    .mb-#{$space} {
+      margin-bottom: #{$space}px !important;
+    }
+    .ml-#{$space} {
+      margin-left: #{$space}px !important;
+    }
+    .mr-#{$space} {
+      margin-right: #{$space}px !important;
+    }
+    .ma-#{$space} {
+      margin: #{$space}px !important;
+    }
+    .pt-#{$space} {
+      padding-top: #{$space}px !important;
+    }
+    .pb-#{$space} {
+      padding-bottom: #{$space}px !important;
+    }
+    .pl-#{$space} {
+      padding-left: #{$space}px !important;
+    }
+    .pr-#{$space} {
+      padding-right: #{$space}px !important;
+    }
+    .pa-#{$space} {
+      padding: #{$space}px !important;
+    }
+    @include media-breakpoint-down(md) {
+      .mt-#{$space}--md {
+        margin-top: #{$space}px !important;
+      }
+      .mb-#{$space}--md {
+        margin-bottom: #{$space}px !important;
+      }
+      .ml-#{$space}--md {
+        margin-left: #{$space}px !important;
+      }
+      .mr-#{$space}--md {
+        margin-right: #{$space}px !important;
+      }
+      .ma-#{$space}--md {
+        padding: #{$space}px !important;
+      }
+      .pt-#{$space}--md {
+        padding-top: #{$space}px !important;
+      }
+      .pb-#{$space}--md {
+        padding-bottom: #{$space}px !important;
+      }
+      .pl-#{$space}--md {
+        padding-left: #{$space}px !important;
+      }
+      .pr-#{$space}--md {
+        padding-right: #{$space}px !important;
+      }
+      .pa-#{$space}--md {
+        padding: #{$space}px !important;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      .mt-#{$space}--sm {
+        margin-top: #{$space}px !important;
+      }
+      .mb-#{$space}--sm {
+        margin-bottom: #{$space}px !important;
+      }
+      .ml-#{$space}--sm {
+        margin-left: #{$space}px !important;
+      }
+      .mr-#{$space}--sm {
+        margin-right: #{$space}px !important;
+      }
+      .ma-#{$space}--sm {
+        padding: #{$space}px !important;
+      }
+      .pt-#{$space}--sm {
+        padding-top: #{$space}px !important;
+      }
+      .pb-#{$space}--sm {
+        padding-bottom: #{$space}px !important;
+      }
+      .pl-#{$space}--sm {
+        padding-left: #{$space}px !important;
+      }
+      .pr-#{$space}--sm {
+        padding-right: #{$space}px !important;
+      }
+      .pa-#{$space}--sm {
+        padding: #{$space}px !important;
+      }
+    }
+  }
+}
+@include generate-spacing-classes();

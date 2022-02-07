@@ -1,0 +1,205 @@
+.text {
+  &--primary {
+    color: $colorPrimary;
+  }
+  &--primary-darken {
+    color: $colorPrimaryDarken;
+  }
+  &--secondary {
+    color: $colorSecondary;
+  }
+  &--secondary-darken {
+    color: $colorSecondaryDarken;
+  }
+
+  &--black {
+    color: $colorBlack;
+  }
+
+  &--white {
+    color: $colorWhite;
+  }
+
+  &--green {
+    color: $colorGreen;
+  }
+
+  &--red {
+    color: $colorGreen;
+  }
+
+  &--yellow {
+    color: $colorYellow;
+  }
+
+  &--blue {
+    color: $colorBlue;
+  }
+
+  &--gray {
+    color: $colorGray;
+  }
+
+  &--light-gray {
+    color: $colorLightGray;
+  }
+
+  &--dark-gray {
+    color: $colorDarkGray;
+  }
+
+  &--background-gray {
+    color: $colorBgGray;
+  }
+
+  &--body-text-color {
+    color: $colorBodyText;
+  }
+
+  &--body-secondary-text-color {
+    color: $colorBodySecondaryText;
+  }
+  &--fw-400 {
+    font-weight: 400;
+  }
+  &--fw-500 {
+    font-weight: 400;
+  }
+  &--fw-600 {
+    font-weight: 600;
+  }
+  &--fw-700 {
+    font-weight: 700;
+  }
+  &--xs {
+    font-size: 12px;
+  }
+  &--sm {
+    font-size: 14px;
+  }
+  &--md {
+    font-size: 16px;
+  }
+  &--lg {
+    font-size: 18px;
+  }
+  &--left {
+    text-align: left;
+  }
+  &--right {
+    text-align: right;
+  }
+  &--center {
+    text-align: center;
+  }
+  &--icon {
+    position: relative;
+    top: 1px;
+  }
+}
+
+a {
+  &.text {
+    &--primary {
+      &:hover,
+      &:focus {
+        color: $colorPrimary;
+      }
+    }
+    &--primary-darken {
+      &:hover,
+      &:focus {
+        color: $colorPrimaryDarken;
+      }
+    }
+    &--secondary {
+      &:hover,
+      &:focus {
+        color: $colorSecondary;
+      }
+    }
+    &--secondary-darken {
+      &:hover,
+      &:focus {
+        color: $colorSecondaryDarken;
+      }
+    }
+
+    &--black {
+      &:hover,
+      &:focus {
+        color: $colorBlack;
+      }
+    }
+
+    &--white {
+      &:hover,
+      &:focus {
+        color: $colorWhite;
+      }
+    }
+
+    &--green {
+      &:hover,
+      &:focus {
+        color: $colorGreen;
+      }
+    }
+
+    &--red {
+      &:hover,
+      &:focus {
+        color: $colorRed;
+      }
+    }
+
+    &--yellow {
+      &:hover,
+      &:focus {
+        color: $colorYellow;
+      }
+    }
+
+    &--blue {
+      &:hover,
+      &:focus {
+        color: $colorBlue;
+      }
+    }
+
+    &--gray {
+      &:hover,
+      &:focus {
+        color: $colorGray;
+      }
+    }
+
+    &--light-gray {
+      &:hover,
+      &:focus {
+        color: $colorLightGray;
+      }
+    }
+
+    &--dark-gray {
+      &:hover,
+      &:focus {
+        color: $colorDarkGray;
+      }
+    }
+
+    &--background-gray {
+      &:hover,
+      &:focus {
+        color: $colorBgGray;
+      }
+    }
+
+    &--body-text-color {
+      &:hover,
+      &:focus {
+        color: $colorBodyText;
+      }
+    }
+  }
+}

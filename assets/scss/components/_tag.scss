@@ -1,0 +1,67 @@
+.tag {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  color: $colorWhite;
+  background: $colorPrimary;
+  border-radius: 2px;
+  text-align: center;
+  padding: 1px 10px 0px 10px;
+  &__icon {
+    margin-top: -4px;
+    color: currentColor;
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+  }
+  a,
+  button {
+   &.tag {
+     &__icon {
+       cursor: pointer;
+     }
+   } 
+  }
+  &--lg {
+    padding: 6px 10px 5px;
+    .tag {
+      &__icon {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+  &--sm {
+    font-size: 12px;
+    line-height: 1.25;
+    padding: 3px 5px 1px;
+    .tag {
+      &--outline {
+        padding-top: 2px;
+        padding-bottom: 0
+      }
+      &__icon {
+        margin-top: -3px;
+        width: 14px;
+        height: 14px;
+      }
+    }
+    
+  }
+  &--xs {
+    font-size: 10px;
+    line-height: 1.4;
+    padding: 3px 5px 2px;
+    .tag {
+      &--outline {
+        padding-top: 2px;
+        padding-bottom: 1px
+      }
+    }
+  }
+  &--outline {
+    color: $colorBlack;
+    border: 1px solid $colorGray;
+    background: $colorWhite;
+  }
+}

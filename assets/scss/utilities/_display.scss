@@ -1,0 +1,20 @@
+.display {
+  &--inline-block {
+    display: inline-block;
+  }
+  &--flex {
+    display: flex;
+  }
+  &--space-between {
+    justify-content: space-between;
+  }
+  &--align-items-center {
+    align-items: center;
+  }
+  &--justify-content-center {
+    justify-content: center;
+  }
+  &--block {
+    display: block;
+  }
+}

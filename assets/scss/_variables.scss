@@ -1,0 +1,56 @@
+// -----------------------------------------------------------------------------
+// Variables
+// -----------------------------------------------------------------------------
+
+//Globals
+$borderRadius: 3px !default;
+$primaryFontPath: "../fonts/open-sans/" !default;
+
+//Colors
+$colorPrimary: #3158ee !default;
+$colorPrimaryDarken: #334eb5 !default;
+$colorSecondary: #d72638 !default;
+$colorSecondaryDarken: #b71f2e !default;
+$colorBlack: #000 !default;
+$colorWhite: #fff !default;
+$colorGreen: #00a64f !default;
+$colorYellow: #f5c800 !default;
+$colorBlue: #3158ee !default;
+$colorGray: #c8d0d0 !default;
+$colorRed: #f01928 !default;
+$colorLightGray: #e8eaea !default;
+$colorDarkGray: #6f7a86 !default;
+$colorBgGray: #f3f7f6 !default;
+$colorBodyText: #000 !default;
+$colorBodySecondaryText: #69676a !default;
+$colorBodyBackground: #f3f7f6 !default;
+
+//Typography
+$typographyH1Color: $colorPrimary !default;
+$typographyBodyFontFamily: "Open Sans", Helvetica, Arial, sans-serif !default;
+
+//Spacing
+$spacingSizes: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50) !default;
+
+//Grid settings
+$gridBreakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1170px,
+  xl: 1440px
+) !default;
+$gridRowMaxWidths: (
+  sm: 540px,
+  md: 720px,
+  lg: 1150px,
+  xl: 1410px
+) !default;
+$gridColumns: 12 !default;
+$gridSpacingDefaultWidth: 20px !default;
+$gridSpacingOtherWidths: (
+  30: 30px,
+  50: 50px,
+  70: 70px
+) !default;
+$rowPaddingX: $gridSpacingDefaultWidth / 2 !default;

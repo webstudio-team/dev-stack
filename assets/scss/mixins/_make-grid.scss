@@ -1,0 +1,118 @@
+//https://github.com/twbs/bootstrap/blob/master/scss/mixins/_grid.scss
+
+@mixin make-row($padding-x: $rowPaddingX) {
+  width: 100%;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin make-row-max-widths(
+  $max-widths: $gridRowMaxWidths,
+  $breakpoints: $gridBreakpoints
+) {
+  @each $breakpoint, $row-max-width in $max-widths {
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      max-width: $row-max-width;
+    }
+  }
+}
+
+@mixin make-grid-wrapper($spacing: $gridSpacingDefaultWidth) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -$spacing / 2;
+  margin-left: -$spacing / 2;
+}
+
+@mixin make-col-ready($spacing: $gridSpacingDefaultWidth) {
+  position: relative;
+  width: 100%;
+  padding-right: $spacing / 2;
+  padding-left: $spacing / 2;
+}
+
+@mixin make-col($size, $columns: $gridColumns) {
+  flex-basis: percentage($size / $columns);
+  max-width: percentage($size / $columns);
+  min-width: percentage($size / $columns);
+}
+
+@mixin make-col-offset($size, $columns: $gridColumns) {
+  $num: $size / $columns;
+  margin-left: if($num == 0, 0, percentage($num));
+}
+
+//https://github.com/twbs/bootstrap/blob/master/scss/mixins/_grid-framework.scss
+
+@mixin make-grid-columns(
+  $columns: $gridColumns,
+  $spacing: $gridSpacingDefaultWidth,
+  $breakpoints: $gridBreakpoints
+) {
+  %grid-column {
+    position: relative;
+    width: 100%;
+    padding-right: $spacing / 2;
+    padding-left: $spacing / 2;
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    @for $i from 1 through $columns {
+      .grid__col#{$infix}-#{$i} {
+        @extend %grid-column;
+      }
+    }
+
+    .grid__col#{$infix},
+    .grid__col#{$infix}-auto {
+      @extend %grid-column;
+    }
+
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      .grid__col#{$infix} {
+        flex-basis: 100%;
+        flex-grow: 1;
+        max-width: 100%;
+      }
+
+      .grid__col-#{$infix}-auto {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+      }
+
+      @for $i from 1 through $columns {
+        .grid__col-#{$infix}-#{$i} {
+          @include make-col($i, $columns);
+        }
+      }
+
+      @for $i from 0 through ($columns - 1) {
+        @if not($infix == "" and $i == 0) {
+          .grid__col--offset#{$infix}-#{$i} {
+            @include make-col-offset($i, $columns);
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin make-spacing-widths() {
+  @each $sizeName, $sizeWidth in $gridSpacingOtherWidths {
+    &--spacing-#{$sizeName} {
+      margin-right: -#{$sizeWidth};
+      margin-left: -#{$sizeWidth};
+
+      > .grid__col,
+      > [class*="grid__col-"] {
+        padding-right: #{$sizeWidth};
+        padding-left: #{$sizeWidth};
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "plugins": ["stylelint-prettier"],
+    "rules": {
+        "indentation": 2,
+        "rule-empty-line-before": "always"
+    }
+}

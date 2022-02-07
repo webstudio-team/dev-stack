@@ -1,0 +1,26 @@
+.float {
+  &-left {
+    &--md {
+      @include media-breakpoint-down(md) {
+        float: left;
+      }
+    }
+    &--sm {
+      @include media-breakpoint-down(sm) {
+        float: left;
+      }
+    }
+  }
+  &-right {
+    &--md {
+      @include media-breakpoint-down(md) {
+        float: right;
+      }
+    }
+    &--sm {
+      @include media-breakpoint-down(sm) {
+        float: right;
+      }
+    }
+  }
+}

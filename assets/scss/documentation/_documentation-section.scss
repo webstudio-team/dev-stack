@@ -1,0 +1,29 @@
+.documentation-section {
+  &__title {
+    font-size: 24px;
+    padding-bottom: 10px;
+    color: $colorBlack;
+    border-bottom: 3px solid $colorBlack;
+  }
+  &-modifiers {
+    &__wrapper {
+      border-left: 3px solid $colorPrimary;
+      padding-left: 10px;
+    }
+    &__list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    &__item {
+      margin-bottom: 5px;
+    }
+    &__modifier {
+      font-weight: 600;
+      background: rgba($colorPrimary, 0.15);
+      border-radius: 4px;
+      padding: 1px 5px;
+      margin-right: 5px;
+    }
+  }
+}

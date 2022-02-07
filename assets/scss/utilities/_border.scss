@@ -1,0 +1,54 @@
+.border {
+  &--primary {
+    border: 1px solid $colorPrimary;
+  }
+  &--primary-darken {
+    border: 1px solid $colorPrimaryDarken;
+  }
+  &--secondary {
+    border: 1px solid $colorSecondary;
+  }
+  &--secondary-darken {
+    border: 1px solid $colorSecondaryDarken;
+  }
+
+  &--black {
+    border: 1px solid $colorBlack;
+  }
+
+  &--white {
+    border: 1px solid $colorWhite;
+  }
+
+  &--green {
+    border: 1px solid $colorGreen;
+  }
+
+  &--red {
+    border: 1px solid $colorRed;
+  }
+
+  &--yellow {
+    border: 1px solid $colorYellow;
+  }
+
+  &--blue {
+    border: 1px solid $colorBlue;
+  }
+
+  &--gray {
+    border: 1px solid $colorGray;
+  }
+
+  &--light-gray {
+    border: 1px solid $colorLightGray;
+  }
+
+  &--dark-gray {
+    border: 1px solid $colorDarkGray;
+  }
+
+  &--background-gray {
+    border: 1px solid $colorBgGray;
+  }
+}

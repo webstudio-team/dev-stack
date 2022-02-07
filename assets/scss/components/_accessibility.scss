@@ -1,0 +1,30 @@
+.accessibility {
+
+  &-navigation {
+    position: absolute;
+    top: 0;
+    left: -1000px;
+
+    a {
+      height: 1px;
+      width: 1px;
+      white-space: nowrap;
+      padding: 10px;
+      background: #fff;
+      z-index: 1;
+
+      &:focus,
+      &:active,
+      &:hover {
+        position: absolute;
+        left: 1000px;
+        top: 0;
+        height: auto;
+        width: 200px;
+        min-width: 200px;
+        overflow: hidden;
+        z-index: 2500000;
+      }
+    }
+  }
+}

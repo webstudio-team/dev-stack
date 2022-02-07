@@ -1,0 +1,62 @@
+.background {
+  &--primary {
+    background: $colorPrimary;
+  }
+  &--primary-darken {
+    background: $colorPrimaryDarken;
+  }
+  &--secondary {
+    background: $colorSecondary;
+  }
+  &--secondary-darken {
+    background: $colorSecondaryDarken;
+  }
+
+  &--black {
+    background: $colorBlack;
+  }
+
+  &--white {
+    background: $colorWhite;
+  }
+
+  &--green {
+    background: $colorGreen;
+  }
+
+  &--red {
+    background: $colorRed;
+  }
+
+  &--yellow {
+    background: $colorYellow;
+  }
+
+  &--blue {
+    background: $colorBlue;
+  }
+
+  &--gray {
+    background: $colorGray;
+  }
+
+  &--light-gray {
+    background: $colorLightGray;
+  }
+
+  &--dark-gray {
+    background: $colorDarkGray;
+  }
+
+  &--background-gray {
+    background: $colorBgGray;
+  }
+
+  &--body-text-color {
+    background: $colorBodyText;
+  }
+
+  &--body-secondary-text-color {
+    background: $colorBodySecondaryText;
+  }
+}

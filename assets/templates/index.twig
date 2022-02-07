@@ -1,0 +1,58 @@
+{% extends "layout/layout.twig" %} 
+{% block title %}webstudio.team dev-stack{%endblock %}
+{% block content %} {% include "layout/navigation.twig" %}
+<main id="main">
+  <h1 class="text--center mb-20 mt-20">webstudio.team dev-stack</h1>
+  <div class="documentation-colors mb-50">
+      {% include "components/colors/index.twig" %}
+  </div>
+  <div class="documentation-typography mb-50">
+      {% include "components/typography/index.twig" %}
+  </div>
+
+  <div class="documentation-grid">
+    {% include "components/grid/index.twig" %}
+  </div>
+
+  <div class="documentation-buttons">
+    {% include "components/buttons/index.twig" %}
+  </div>
+  
+  <div>
+    {% include "components/inputs/index.twig" %}
+  </div>
+
+  <div>
+    {% include "components/navigation-main/index.twig" %}
+  </div>
+
+  <div>
+    {% include "components/header-main/index.twig" %}
+  </div>
+
+  <div>
+    {% include "components/footer-main/index.twig" %}
+  </div>
+
+  <div>
+    {% include "components/tab-list/index.twig" %}
+  </div>
+
+  <div>
+    {% include "components/action-group/index.twig" %}
+  </div>
+
+  <div>
+    {% include "components/tag/index.twig" %}
+  </div>
+
+  <div>
+    {% include "components/accordion/index.twig" %}
+  </div>
+
+  <div>
+    {% include "components/image-tile/index.twig" %}
+  </div>
+
+</main>
+{% endblock %}
