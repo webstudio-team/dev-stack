@@ -45,8 +45,7 @@
   },
 
   "tasks": {
-    "build": ["styles", "images", "res-img", "fonts", "copy-fa-fonts", "svg", "templates", "extras"],
-    "serve": ["styles", "images", "res-img", "fonts", "copy-fa-fonts", "svg", "templates"],
-    "production": ["styles:min", "fonts", "copy-fa-fonts", "images", "res-img:min","favicon", "svg", "templates", "extras"]
+    "serve": ["styles", "images", "res-img", "fonts", "copy-fa-fonts", "svg", "templates", "extras", "vendors"],
+    "production": ["styles:min", "fonts", "copy-fa-fonts", "images", "res-img:min","favicon", "svg", "templates", "extras", "vendors:min"]
   }
 }

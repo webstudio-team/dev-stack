@@ -13,10 +13,8 @@
   },
   "homepage": "https://github.com/webstudio-team/dev-stack#readme",
   "scripts": {
-    "serve": "concurrently --kill-others \"gulp serve\" \"yarn run webpack-cli --mode=development\"",
     "dev": "concurrently --kill-others \"gulp serve\" \"yarn run webpack-cli --mode=development\"",
-    "prod": "gulp production && yarn run webpack-cli --mode=production",
-    "production": "gulp production && yarn run webpack-cli --mode=production"
+    "prod": "gulp production && yarn run webpack-cli --mode=production"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
