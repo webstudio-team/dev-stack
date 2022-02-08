@@ -28,3 +28,6 @@ Compile, optimize and copy all assets to `dist`:
 ```
 yarn prod
 ```
+
+## Demo
+https://webstudio-team.github.io/dev-stack/
