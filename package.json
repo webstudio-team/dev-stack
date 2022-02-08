@@ -1,6 +1,6 @@
 {
   "name": "@webstudio-team/dev-stack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "Simple dev-stack with a set of reusable vanilla components. Based on [Gulp](https://gulpjs.com) and [Webpack](https://webpack.js.org).",
   "main": "gulpfile.js",
